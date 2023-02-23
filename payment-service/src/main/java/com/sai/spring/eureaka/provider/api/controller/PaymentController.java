@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
 
 	@GetMapping("/payNow/{price}")
-	public String payNow(@PathVariable int price) {
+	public String payNow(@PathVariable("price") int price) {
 		return "payment with " + price + " is successfull";
 	}
 
